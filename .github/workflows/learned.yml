@@ -24,6 +24,3 @@ jobs:
       - name: Build the React app
         run: npm run build
 
-
-      - name: Display "Hello World"
-        run: echo "Hello World"
