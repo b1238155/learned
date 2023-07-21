@@ -45,7 +45,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: |
-          npm install  gh-pages
+          npm install
           gh-pages -d build
 
       - name: Display "Hello World" (if deployment was successful)
