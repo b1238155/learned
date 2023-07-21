@@ -25,10 +25,11 @@ jobs:
         run: npm run build
 
   deploy:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v2
 
       - name: Set up Node.js
@@ -36,11 +37,17 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm install
 
       - name: Build the React app
         run: npm run build
 
-      - name: Deploy
-        run: echo "Deploying..."
+      - name: Deploy to GitHub Pages
+        run: |
+          npm install -g gh-pages
+          gh-pages -d build
+
+      - name: Display "Hello World" (if deployment was successful)
+        run: echo "Hello World"
+        if: success()  # This will only run if the deployment is successful
