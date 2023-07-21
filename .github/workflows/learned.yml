@@ -44,9 +44,8 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        run: |
-          
-          gh-pages -d build
+        run: echo "Hello World"
+    
 
       - name: Display "Hello World" (if deployment was successful)
         run: echo "Hello World"
