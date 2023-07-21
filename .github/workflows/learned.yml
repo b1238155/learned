@@ -24,10 +24,6 @@ jobs:
       - name: Build the React app
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        run: |
-          npm install -g gh-pages
-          gh-pages -d build
 
       - name: Display "Hello World"
         run: echo "Hello World"
