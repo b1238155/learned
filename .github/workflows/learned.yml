@@ -33,4 +33,4 @@ jobs:
         run: echo "Deployed"
 
       - name: Deploy to GitHub Pages
-        run: npm run deploy
+        run: echo "Hello World"
