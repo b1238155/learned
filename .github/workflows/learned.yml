@@ -39,7 +39,7 @@ jobs:
           path: gh-pages
 
       - name: Update App.js
-        run: echo "<div>Hello Bala</div>" > gh-pages/App.js
+        run: echo "<h1>Hello Bala</h1>" > gh-pages/App.js
 
       - name: Commit and Push Changes
         run: |
